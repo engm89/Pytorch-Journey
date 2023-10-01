@@ -78,10 +78,10 @@ def check_accuracy(loader, model):
 												
 												scores = model(x)
 												_, predictions = scores.max(1)
-												num_correct += (predictions==y).sum()
+												num_correct += (predictions == y).sum()
 												num_samples += predictions.size(0)
 								
-								print(f'Got {num_correct} / {num_samples} with accuacy {float(num_correct)/float(num_samples)*100:.2f}')
+								print(f'Got {num_correct} / {num_samples} with accuacy {float(num_correct) / float(num_samples) * 100:.2f}')
 				
 				model.train()
 
